@@ -76,15 +76,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.html" />
+    <Content Include="Libs\css\bootstrap.4.1.0.css" />
+    <Content Include="Libs\js\bootstrap.4.1.0.js" />
+    <Content Include="Libs\js\jquery-3.1.1.js" />
+    <Content Include="Source\css\Index.css" />
+    <Content Include="Source\js\Board.js" />
+    <Content Include="Source\js\Index.js" />
+    <Content Include="Source\js\Tracker.js" />
+    <Content Include="Source\js\Utils.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="css\" />
-    <Folder Include="js\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
