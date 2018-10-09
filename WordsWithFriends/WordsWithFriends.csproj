@@ -81,7 +81,7 @@
     <Content Include="src\assets\js\jquery-3.1.1.js" />
     <Content Include="src\assets\css\Index.css" />
     <Content Include="src\logic\Board.js" />
-    <Content Include="src\logic\dawg.js" />
+    <Content Include="src\logic\Dawg.js" />
     <Content Include="src\logic\Index.js" />
     <Content Include="src\logic\Tracker.js" />
     <Content Include="src\logic\Utils.js" />
