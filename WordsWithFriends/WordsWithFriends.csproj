@@ -76,14 +76,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.html" />
-    <Content Include="Libs\css\bootstrap.4.1.0.css" />
-    <Content Include="Libs\js\bootstrap.4.1.0.js" />
-    <Content Include="Libs\js\jquery-3.1.1.js" />
-    <Content Include="Source\css\Index.css" />
-    <Content Include="Source\js\Board.js" />
-    <Content Include="Source\js\Index.js" />
-    <Content Include="Source\js\Tracker.js" />
-    <Content Include="Source\js\Utils.js" />
+    <Content Include="src\assets\css\bootstrap.4.1.0.css" />
+    <Content Include="src\assets\js\bootstrap.4.1.0.js" />
+    <Content Include="src\assets\js\jquery-3.1.1.js" />
+    <Content Include="src\assets\css\Index.css" />
+    <Content Include="src\logic\Board.js" />
+    <Content Include="src\logic\dawg.js" />
+    <Content Include="src\logic\Index.js" />
+    <Content Include="src\logic\Tracker.js" />
+    <Content Include="src\logic\Utils.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
