@@ -8,7 +8,7 @@ $(document).ready(function () {
     dawg.insert('bad');
     dawg.insert('badass');
     dawg.insert('navigation');
-    dawg.display();
+    //dawg.display();
     Board.init();
     //
     $(document).on('input', '.txt', function (e) {

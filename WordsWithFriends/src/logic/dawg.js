@@ -8,7 +8,6 @@ var DawgNode = (function () {
     };
     return node;
 }());
-
 var dawg = new (function () {
     var dawg = function () {
         this.previousWord = "";
@@ -41,28 +40,40 @@ var dawg = new (function () {
             node = this.root
         else
             node = this.uncheckedNodes[this.uncheckedNodes.length - 1].child;
-        
+
         for (var i = commonPrefix; i < word.length; i++) {
             let nextNode = new DawgNode();
             node.edges[word[i]] = nextNode;
             this.uncheckedNodes.push({ parent: node, letter: word[i], child: nextNode });
             node = nextNode;
         }
-       
+
 
         node.final = true;
         this.previousWord = word;
     };
     dawg.prototype.minimize = function (downTo) {
+
         //proceed from the leaf up to a certain point
         for (var i = this.uncheckedNodes.length - 1; i >= downTo; i--) {
-            let v = this.uncheckedNodes[i];
-            if (this.minimizedNodes.find(x => x.id == c.child.id))
-                //replace the child with the previously encountered one
-                v.parent.edges[v.letter] = this.minimizedNodes[v.child]
-            else this.minimizedNodes[v.child] = v.child;//add the state to the minimized nodes.
+            var v = this.uncheckedNodes[i];
+            //replace the child with the previously encountered one
+            var mNode = this.minimizedNodes.find(x => x.id == v.child.id);
+            console.log("min:");
+            console.log(this.minimizedNodes);
+            console.log("v:");
+            console.log(v.child.id);
+            if (mNode != null) {
+                v.parent.edges[v.letter] = mNode;
+                console.log('------------------------------>');
+                //console.log(mNode);
+            }
+            else this.minimizedNodes.push(v.child);//add the state to the minimized nodes.
             this.uncheckedNodes.pop();
         }
+        //console.log('prev word');
+        //console.log(this.previousWord);
+        //console.log(this.uncheckedNodes);
     };
     dawg.prototype.display = function () {
         console.log('root:');
@@ -75,7 +86,7 @@ var dawg = new (function () {
             done.push(n.id);
             console.log(n.id + ':');
             for (letter in n.edges) {
-                console.log('       ' + letter + '->'+n.edges[letter].id);
+                console.log('       ' + letter + '->' + n.edges[letter].id);
                 arr.push(n.edges[letter]);
             }
         }
