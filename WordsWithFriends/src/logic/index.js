@@ -1,7 +1,14 @@
-﻿///<reference path="../../Libs/jquery-3.1.1.js"/>
+﻿///<reference path="../assets/js/jquery-3.1.1.js"/>
 
 $(document).ready(function () {
-
+    dawg.insert('app');
+    dawg.insert('apple');
+    dawg.insert('application');
+    dawg.insert('apron');
+    dawg.insert('bad');
+    dawg.insert('badass');
+    dawg.insert('navigation');
+    dawg.display();
     Board.init();
     //
     $(document).on('input', '.txt', function (e) {
